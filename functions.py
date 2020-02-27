@@ -2,6 +2,9 @@
 # A function to square numbers. 
 
 # () Whatever is in the brackets is called the arguments
+
+import math
+
 def power(x,y):
     ans = x
     y = y - 1
@@ -19,3 +22,13 @@ def f(x):
 
 print(f(5))
 
+#This picks out prime numbers in selected range.
+
+def isprime(i):
+    # Loop through all values j from 2 up to but not including i.
+    for j in range(2, math.floor(math.sqrt(i))):
+        # See if j divides i.
+        if i % j == 0:
+            # If it does, i isn't prime so exit the loop and indicate not prime.
+            return False
+    return True
